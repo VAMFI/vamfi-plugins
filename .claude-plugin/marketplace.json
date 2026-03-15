@@ -66,6 +66,36 @@
         "multi-agent",
         "autonomous"
       ]
+    },
+    {
+      "name": "vamfi-founder-system",
+      "source": "./plugins/vamfi-founder-system",
+      "description": "Founder operating system — 4 specialized agents and 8 skills that turn Claude into a practical chief-of-staff for solo founders. Covers opportunity validation, customer research, weekly planning, execution discipline, decision memos, and launch planning.",
+      "author": {
+        "name": "Vamfi"
+      },
+      "homepage": "https://github.com/VAMFI/vamfi-plugins",
+      "repository": "https://github.com/VAMFI/vamfi-plugins",
+      "license": "MIT",
+      "keywords": [
+        "founder",
+        "startup",
+        "strategy",
+        "planning",
+        "research",
+        "execution",
+        "validation",
+        "decision-support",
+        "cowork"
+      ],
+      "category": "business",
+      "tags": [
+        "founder",
+        "startup",
+        "strategy",
+        "execution",
+        "validation"
+      ]
     }
   ]
 }

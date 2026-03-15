@@ -1,0 +1,22 @@
+{
+  "name": "vamfi-founder-system",
+  "version": "1.0.0",
+  "description": "Founder operating system for opportunity validation, customer research, weekly planning, focused execution, decision support, and launch planning. Turns Claude into a practical chief-of-staff for solo founders and small founding teams.",
+  "author": {
+    "name": "Vamfi",
+    "url": "https://vamfi.org"
+  },
+  "license": "MIT",
+  "keywords": [
+    "founder",
+    "startup",
+    "strategy",
+    "planning",
+    "research",
+    "execution",
+    "validation",
+    "cowork",
+    "claude-code",
+    "decision-support"
+  ]
+}
