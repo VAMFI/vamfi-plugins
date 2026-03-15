@@ -1,6 +1,6 @@
 # Vamfi Plugins for Claude Code
 
-Open-source Claude Code plugin marketplace by **[Vamfi](https://vamfi.com)**.
+Open-source Claude Code plugin marketplace by **[Vamfi](https://vamfi.org)**.
 
 ## Installation
 
