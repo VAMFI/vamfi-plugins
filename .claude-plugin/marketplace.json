@@ -1,0 +1,71 @@
+{
+  "name": "vamfi-plugins",
+  "owner": {
+    "name": "Vamfi",
+    "email": "hello@vamfi.com"
+  },
+  "metadata": {
+    "description": "Open-source Claude Code plugins by Vamfi — AI-powered business mentoring, autonomous BMAD Cowork teams, and workflow automation for any business."
+  },
+  "plugins": [
+    {
+      "name": "vamfi-business-mentor",
+      "source": "./plugins/vamfi-business-mentor",
+      "description": "AI-powered business mentor with strategic advice, proven frameworks (SWOT, Lean Canvas, OKRs), and coaching for any business type — from idea stage to scale.",
+      "author": {
+        "name": "Vamfi"
+      },
+      "homepage": "https://github.com/VAMFI/vamfi-plugins",
+      "repository": "https://github.com/VAMFI/vamfi-plugins",
+      "license": "MIT",
+      "keywords": [
+        "business",
+        "mentor",
+        "strategy",
+        "startup",
+        "coaching",
+        "frameworks",
+        "lean-canvas",
+        "swot",
+        "financial-modeling"
+      ],
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "mentoring",
+        "startup",
+        "frameworks"
+      ]
+    },
+    {
+      "name": "bmad-cowork",
+      "source": "./plugins/bmad-cowork",
+      "description": "BMAD Method as native Claude Cowork teams — 9 specialized AI agents (Analyst, PM, UX, Architect, Scrum Master, Developer, QA, Quick Dev, Tech Writer) that collaborate autonomously through phased workflows.",
+      "author": {
+        "name": "Vamfi"
+      },
+      "homepage": "https://github.com/VAMFI/vamfi-plugins",
+      "repository": "https://github.com/VAMFI/vamfi-plugins",
+      "license": "MIT",
+      "keywords": [
+        "bmad",
+        "cowork",
+        "agile",
+        "multi-agent",
+        "product-development",
+        "scrum",
+        "autonomous",
+        "teamwork"
+      ],
+      "category": "workflow",
+      "tags": [
+        "bmad",
+        "cowork",
+        "agile",
+        "multi-agent",
+        "autonomous"
+      ]
+    }
+  ]
+}

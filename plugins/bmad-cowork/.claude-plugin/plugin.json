@@ -1,0 +1,22 @@
+{
+  "name": "bmad-cowork",
+  "version": "1.0.0",
+  "description": "BMAD Method as a native Claude Cowork team — 9 specialized AI agents (Analyst, PM, UX, Architect, Scrum Master, Developer, QA, Quick Dev, Tech Writer) that collaborate autonomously through phased workflows to take projects from idea to implementation.",
+  "author": {
+    "name": "Vamfi",
+    "url": "https://vamfi.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bmad",
+    "cowork",
+    "agile",
+    "multi-agent",
+    "product-development",
+    "scrum",
+    "architecture",
+    "prd",
+    "sprint",
+    "autonomous"
+  ]
+}

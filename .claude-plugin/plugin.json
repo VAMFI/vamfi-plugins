@@ -1,0 +1,10 @@
+{
+  "name": "vamfi-plugins",
+  "version": "1.0.0",
+  "description": "Open-source Claude Code plugin marketplace by Vamfi — business mentoring, BMAD Cowork methodology, and AI-powered workflow automation.",
+  "author": {
+    "name": "Vamfi",
+    "url": "https://vamfi.com"
+  },
+  "license": "MIT"
+}

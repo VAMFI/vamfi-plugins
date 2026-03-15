@@ -1,0 +1,14 @@
+{
+  "SessionStart": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "Check if the current project directory contains any business-relevant files (business plans, pitch decks, financial models, README with business context, package.json with product description). If found, briefly note their existence so the business mentoring skills can reference them for contextual advice. Do NOT modify any files. Just acknowledge what business context is available.",
+          "timeout": 15
+        }
+      ]
+    }
+  ]
+}

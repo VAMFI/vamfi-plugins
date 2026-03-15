@@ -1,0 +1,24 @@
+{
+  "name": "vamfi-business-mentor",
+  "version": "1.0.0",
+  "description": "AI-powered business mentor providing strategic advice, startup guidance, operational coaching, and proven frameworks for any business type. Built by Vamfi.",
+  "author": {
+    "name": "Vamfi",
+    "url": "https://vamfi.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "business",
+    "mentor",
+    "strategy",
+    "startup",
+    "coaching",
+    "frameworks",
+    "lean-canvas",
+    "swot",
+    "pitch",
+    "financial-modeling",
+    "okr",
+    "go-to-market"
+  ]
+}
