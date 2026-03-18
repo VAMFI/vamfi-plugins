@@ -96,6 +96,35 @@
         "execution",
         "validation"
       ]
+    },
+    {
+      "name": "team-packs",
+      "source": "./plugins/team-packs",
+      "description": "Universal folder-based team configuration system. Save, load, create, and reuse multi-agent team packs that work with any LLM runtime — with 3 built-in team packs for software dev, marketing, and devops.",
+      "author": {
+        "name": "Vamfi"
+      },
+      "homepage": "https://github.com/VAMFI/vamfi-plugins",
+      "repository": "https://github.com/VAMFI/vamfi-plugins",
+      "license": "MIT",
+      "keywords": [
+        "teams",
+        "agents",
+        "orchestration",
+        "multi-agent",
+        "reusable",
+        "portable",
+        "cowork",
+        "team-packs"
+      ],
+      "category": "workflow",
+      "tags": [
+        "teams",
+        "orchestration",
+        "multi-agent",
+        "portable",
+        "reusable"
+      ]
     }
   ]
 }
