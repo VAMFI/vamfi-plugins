@@ -1,0 +1,11 @@
+{
+  "name": "team-packs",
+  "version": "1.0.0",
+  "description": "Universal folder-based team configuration system. Save, load, create, and reuse multi-agent team packs that work with any LLM runtime.",
+  "author": {
+    "name": "VAMFI",
+    "url": "https://github.com/vamfi"
+  },
+  "license": "MIT",
+  "keywords": ["teams", "agents", "orchestration", "multi-agent", "reusable", "portable"]
+}

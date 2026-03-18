@@ -1,0 +1,59 @@
+name: build-feature
+description: End-to-end feature development — research, design, implement, review, test
+trigger: "build|implement|create|add feature|new feature"
+
+phases:
+  - name: research
+    agent: researcher
+    task: |
+      Research the requirements and existing codebase for: {{TASK}}
+      Find relevant files, patterns, dependencies, and potential challenges.
+      Produce a research brief.
+    output: research-brief
+    timeout: 5m
+
+  - name: architecture
+    agent: architect
+    task: |
+      Based on the research findings, design the architecture for: {{TASK}}
+      {{research-brief}}
+      Create a clear implementation plan with numbered steps.
+    depends_on: [research]
+    output: architecture-brief
+    requires_approval: true
+
+  - name: implementation
+    agent: developer
+    task: |
+      Implement the feature following this architecture:
+      {{architecture-brief}}
+      Write tests alongside implementation. Follow coding standards.
+    depends_on: [architecture]
+    output: implementation
+
+  - name: review
+    agent: reviewer
+    task: |
+      Review the implementation for: {{TASK}}
+      Check against the architecture spec:
+      {{architecture-brief}}
+    depends_on: [implementation]
+    output: review-report
+
+  - name: testing
+    agent: tester
+    task: |
+      Write and run comprehensive tests for: {{TASK}}
+      Ensure edge cases and error paths are covered.
+    depends_on: [implementation]
+    parallel_with: [review]
+    output: test-results
+
+  - name: finalize
+    agent: orchestrator
+    task: |
+      Review the code review findings and test results.
+      {{review-report}}
+      {{test-results}}
+      If issues found, create fix tasks. Otherwise, mark complete.
+    depends_on: [review, testing]

@@ -1,0 +1,49 @@
+name: campaign-launch
+description: Full campaign creation — research, strategy, copywriting, review
+trigger: "campaign|launch|marketing|promote"
+
+phases:
+  - name: research
+    agent: market-researcher
+    task: |
+      Research the target audience and competitive landscape for: {{TASK}}
+      Produce a comprehensive research brief.
+    output: research-brief
+    timeout: 5m
+
+  - name: strategy
+    agent: strategist
+    task: |
+      Create a campaign strategy based on this research:
+      {{research-brief}}
+      Define messaging, channels, and content assignments.
+    depends_on: [research]
+    output: campaign-brief
+    requires_approval: true
+
+  - name: copywriting
+    agent: copywriter
+    task: |
+      Write marketing copy for all channels defined in this brief:
+      {{campaign-brief}}
+      Deliver in table format with A/B variants.
+    depends_on: [strategy]
+    output: marketing-copy
+
+  - name: review
+    agent: content-reviewer
+    task: |
+      Review all marketing copy for quality and brand consistency.
+      Campaign brief: {{campaign-brief}}
+      Copy to review: {{marketing-copy}}
+    depends_on: [copywriting]
+    output: review-report
+
+  - name: finalize
+    agent: orchestrator
+    task: |
+      Review the content review report.
+      {{review-report}}
+      If revisions needed, assign fixes to copywriter.
+      Otherwise, compile the final campaign package.
+    depends_on: [review]

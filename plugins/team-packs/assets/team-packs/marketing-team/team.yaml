@@ -1,0 +1,58 @@
+name: marketing-team
+version: "1.0"
+description: Marketing campaign team — research, strategy, copywriting, and content review
+
+orchestrator:
+  file: orchestrator.md
+  model: opus
+
+agents:
+  - name: market-researcher
+    file: agents/market-researcher.md
+    model: sonnet
+    tools: [file_read, web_search, file_write]
+    reports_to: orchestrator
+
+  - name: strategist
+    file: agents/strategist.md
+    model: opus
+    tools: [file_read, file_write, web_search]
+    reports_to: orchestrator
+    collaborates_with: [market-researcher]
+
+  - name: copywriter
+    file: agents/copywriter.md
+    model: sonnet
+    tools: [file_read, file_write, file_edit]
+    reports_to: orchestrator
+    collaborates_with: [strategist]
+
+  - name: content-reviewer
+    file: agents/content-reviewer.md
+    model: sonnet
+    tools: [file_read, file_write]
+    reports_to: orchestrator
+    collaborates_with: [copywriter]
+
+shared_rules:
+  - rules/brand-voice.md
+  - rules/communication.md
+
+workflows:
+  - workflows/campaign-launch.yaml
+  - workflows/content-review.yaml
+
+tool_mappings:
+  claude_code:
+    file_read: Read
+    file_write: Write
+    file_edit: Edit
+    shell: Bash
+    web_search: WebSearch
+    file_search: Glob
+    content_search: Grep
+  generic:
+    file_read: read_file
+    file_write: write_file
+    file_edit: edit_file
+    web_search: web_search

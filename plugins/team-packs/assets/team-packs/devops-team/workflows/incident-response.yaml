@@ -1,0 +1,51 @@
+name: incident-response
+description: Structured incident response with investigation and remediation
+trigger: "incident|outage|down|broken|production issue"
+
+phases:
+  - name: assess
+    agent: incident-responder
+    task: |
+      Assess the production incident: {{TASK}}
+      Determine impact, scope, and recent changes.
+      Implement immediate mitigation if possible.
+    output: assessment
+
+  - name: investigate
+    agent: incident-responder
+    task: |
+      Investigate root cause based on assessment:
+      {{assessment}}
+      Check logs, metrics, and recent code changes.
+    depends_on: [assess]
+    output: investigation
+
+  - name: monitor-support
+    agent: monitoring-specialist
+    task: |
+      Provide monitoring data to support incident investigation:
+      {{assessment}}
+      Pull relevant metrics, logs, and dashboard links.
+    depends_on: [assess]
+    parallel_with: [investigate]
+    output: monitoring-data
+
+  - name: remediate
+    agent: infra-engineer
+    task: |
+      Implement remediation based on investigation findings:
+      {{investigation}}
+      {{monitoring-data}}
+    depends_on: [investigate, monitor-support]
+    output: remediation
+    requires_approval: true
+
+  - name: review
+    agent: orchestrator
+    task: |
+      Compile post-incident review from all findings.
+      Assessment: {{assessment}}
+      Investigation: {{investigation}}
+      Remediation: {{remediation}}
+      Assign follow-up action items.
+    depends_on: [remediate]

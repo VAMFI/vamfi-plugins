@@ -1,0 +1,18 @@
+name: content-review
+description: Review existing content against brand standards
+trigger: "review content|check copy|brand review"
+
+phases:
+  - name: review
+    agent: content-reviewer
+    task: |
+      Review this content against brand voice guidelines: {{TASK}}
+      Check for quality, consistency, and accuracy.
+    output: review-report
+
+  - name: finalize
+    agent: orchestrator
+    task: |
+      Present the content review findings to the user.
+      {{review-report}}
+    depends_on: [review]

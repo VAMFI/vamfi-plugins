@@ -1,0 +1,39 @@
+name: deploy
+description: Safe deployment with security audit and monitoring setup
+trigger: "deploy|release|ship|push to production"
+
+phases:
+  - name: security-audit
+    agent: security-auditor
+    task: |
+      Audit the changes for security issues before deployment: {{TASK}}
+      Check for hardcoded secrets, misconfigurations, and vulnerabilities.
+    output: audit-report
+    timeout: 5m
+
+  - name: deploy-infra
+    agent: infra-engineer
+    task: |
+      Deploy the infrastructure changes: {{TASK}}
+      Security audit results: {{audit-report}}
+      Include rollback plan.
+    depends_on: [security-audit]
+    output: deploy-report
+    requires_approval: true
+
+  - name: setup-monitoring
+    agent: monitoring-specialist
+    task: |
+      Set up monitoring and alerting for the deployed changes.
+      Deployment details: {{deploy-report}}
+    depends_on: [deploy-infra]
+    output: monitoring-report
+
+  - name: finalize
+    agent: orchestrator
+    task: |
+      Review deployment and monitoring status.
+      Deploy: {{deploy-report}}
+      Monitoring: {{monitoring-report}}
+      Confirm everything is healthy.
+    depends_on: [setup-monitoring]

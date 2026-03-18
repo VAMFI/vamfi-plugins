@@ -1,0 +1,31 @@
+name: security-audit
+description: Comprehensive security audit of infrastructure and code
+trigger: "security audit|vulnerability scan|security review|compliance check"
+
+phases:
+  - name: audit
+    agent: security-auditor
+    task: |
+      Perform a comprehensive security audit: {{TASK}}
+      Check infrastructure configs, code, dependencies, and IAM policies.
+    output: audit-report
+    timeout: 10m
+
+  - name: remediation-plan
+    agent: infra-engineer
+    task: |
+      Create a remediation plan for security findings:
+      {{audit-report}}
+      Prioritize by severity — fix critical issues first.
+    depends_on: [audit]
+    output: remediation-plan
+    requires_approval: true
+
+  - name: finalize
+    agent: orchestrator
+    task: |
+      Review audit and remediation plan.
+      Audit: {{audit-report}}
+      Plan: {{remediation-plan}}
+      Prioritize and assign follow-up work.
+    depends_on: [remediation-plan]

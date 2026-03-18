@@ -1,0 +1,62 @@
+name: devops-team
+version: "1.0"
+description: DevOps and SRE team — infrastructure, security, monitoring, and incident response
+
+orchestrator:
+  file: orchestrator.md
+  model: opus
+
+agents:
+  - name: infra-engineer
+    file: agents/infra-engineer.md
+    model: opus
+    tools: [file_read, file_write, file_edit, shell, content_search, file_search]
+    reports_to: orchestrator
+    collaborates_with: [security-auditor]
+
+  - name: security-auditor
+    file: agents/security-auditor.md
+    model: sonnet
+    tools: [file_read, shell, content_search, file_search]
+    reports_to: orchestrator
+    collaborates_with: [infra-engineer]
+
+  - name: monitoring-specialist
+    file: agents/monitoring-specialist.md
+    model: sonnet
+    tools: [file_read, file_write, shell, content_search]
+    reports_to: orchestrator
+
+  - name: incident-responder
+    file: agents/incident-responder.md
+    model: opus
+    tools: [file_read, file_write, file_edit, shell, web_search, content_search]
+    reports_to: orchestrator
+    collaborates_with: [monitoring-specialist, infra-engineer]
+
+shared_rules:
+  - rules/security.md
+  - rules/communication.md
+
+workflows:
+  - workflows/deploy.yaml
+  - workflows/incident-response.yaml
+  - workflows/security-audit.yaml
+
+tool_mappings:
+  claude_code:
+    file_read: Read
+    file_write: Write
+    file_edit: Edit
+    shell: Bash
+    web_search: WebSearch
+    file_search: Glob
+    content_search: Grep
+  generic:
+    file_read: read_file
+    file_write: write_file
+    file_edit: edit_file
+    shell: execute_command
+    web_search: web_search
+    file_search: find_files
+    content_search: search_content

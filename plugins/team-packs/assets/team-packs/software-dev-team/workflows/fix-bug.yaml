@@ -1,0 +1,50 @@
+name: fix-bug
+description: Bug investigation and fix — research, implement fix, test, review
+trigger: "fix|bug|debug|issue|broken"
+
+phases:
+  - name: investigate
+    agent: researcher
+    task: |
+      Investigate the bug: {{TASK}}
+      Find the root cause by tracing through the codebase.
+      Identify which files are affected and what's going wrong.
+    output: investigation-report
+    timeout: 5m
+
+  - name: fix
+    agent: developer
+    task: |
+      Fix the bug based on this investigation:
+      {{investigation-report}}
+      Write a regression test that would have caught this bug.
+    depends_on: [investigate]
+    output: fix-implementation
+
+  - name: verify
+    agent: tester
+    task: |
+      Verify the bug fix works:
+      - Run the regression test
+      - Run the full test suite
+      - Confirm no other tests broke
+    depends_on: [fix]
+    output: verification-results
+
+  - name: review
+    agent: reviewer
+    task: |
+      Review the bug fix for correctness and completeness.
+      Check that the root cause is properly addressed, not just the symptom.
+    depends_on: [fix]
+    parallel_with: [verify]
+    output: review-report
+
+  - name: finalize
+    agent: orchestrator
+    task: |
+      Review verification and code review results.
+      {{verification-results}}
+      {{review-report}}
+      Confirm the bug is properly fixed.
+    depends_on: [verify, review]

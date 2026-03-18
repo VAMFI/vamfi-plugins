@@ -1,0 +1,72 @@
+name: software-dev-team
+version: "1.0"
+description: Full-stack software development team with research, architecture, TDD, and code review
+
+orchestrator:
+  file: orchestrator.md
+  model: opus
+
+agents:
+  - name: researcher
+    file: agents/researcher.md
+    model: sonnet
+    tools: [file_read, web_search, file_search, content_search]
+    reports_to: orchestrator
+
+  - name: architect
+    file: agents/architect.md
+    model: opus
+    tools: [file_read, file_write, file_search, content_search, shell]
+    reports_to: orchestrator
+    collaborates_with: [developer]
+
+  - name: developer
+    file: agents/developer.md
+    model: opus
+    tools: [file_read, file_write, file_edit, shell, file_search, content_search]
+    reports_to: orchestrator
+    collaborates_with: [reviewer, tester, architect]
+
+  - name: reviewer
+    file: agents/reviewer.md
+    model: sonnet
+    tools: [file_read, content_search, shell]
+    reports_to: orchestrator
+    collaborates_with: [developer]
+
+  - name: tester
+    file: agents/tester.md
+    model: sonnet
+    tools: [file_read, file_write, file_edit, shell, content_search]
+    reports_to: orchestrator
+    collaborates_with: [developer]
+
+shared_rules:
+  - rules/coding-standards.md
+  - rules/communication.md
+
+workflows:
+  - workflows/build-feature.yaml
+  - workflows/fix-bug.yaml
+
+tool_mappings:
+  claude_code:
+    file_read: Read
+    file_write: Write
+    file_edit: Edit
+    shell: Bash
+    web_search: WebSearch
+    file_search: Glob
+    content_search: Grep
+  openai:
+    file_read: file_search
+    shell: code_interpreter
+    web_search: web_search
+  generic:
+    file_read: read_file
+    file_write: write_file
+    file_edit: edit_file
+    shell: execute_command
+    web_search: web_search
+    file_search: find_files
+    content_search: search_content
