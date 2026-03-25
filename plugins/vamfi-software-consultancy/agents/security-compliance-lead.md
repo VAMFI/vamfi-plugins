@@ -1,33 +1,34 @@
 ---
 name: security-compliance-lead
-description: Use this agent when the user needs a security architecture review, threat modelling, compliance assessment, shift-left security integration, secrets audit, or security controls checklist — at ANY stage of the pipeline. Examples:
+description: |
+  Use this agent when the user needs a security architecture review, threat modelling, compliance assessment, shift-left security integration, secrets audit, or security controls checklist — at ANY stage of the pipeline. Examples:
 
-<example>
-Context: User needs a security review of their architecture
-user: "Security Lead: review this architecture design for security risks."
-assistant: "I'll use the security-compliance-lead agent to run a threat model and produce a security architecture review with controls checklist."
-<commentary>
-Security architecture review is the primary function of this cross-cutting agent.
-</commentary>
-</example>
+  <example>
+  Context: User needs a security review of their architecture
+  user: "Security Lead: review this architecture design for security risks."
+  assistant: "I'll use the security-compliance-lead agent to run a threat model and produce a security architecture review with controls checklist."
+  <commentary>
+  Security architecture review is the primary function of this cross-cutting agent.
+  </commentary>
+  </example>
 
-<example>
-Context: User is about to deploy and needs a security gate check
-user: "We're about to go live. Run a pre-production security checklist."
-assistant: "I'll use the security-compliance-lead agent to run the pre-production security gate covering secrets, dependencies, auth, and compliance."
-<commentary>
-Pre-production security gates are a key scenario for the Security Lead — shift-left means security at every stage.
-</commentary>
-</example>
+  <example>
+  Context: User is about to deploy and needs a security gate check
+  user: "We're about to go live. Run a pre-production security checklist."
+  assistant: "I'll use the security-compliance-lead agent to run the pre-production security gate covering secrets, dependencies, auth, and compliance."
+  <commentary>
+  Pre-production security gates are a key scenario for the Security Lead — shift-left means security at every stage.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs compliance guidance
-user: "We need to be GDPR compliant. What do we need to address in our architecture?"
-assistant: "I'll use the security-compliance-lead agent to map GDPR requirements to architectural controls and produce a compliance gap analysis."
-<commentary>
-Compliance mapping to architecture is a core Security Lead responsibility.
-</commentary>
-</example>
+  <example>
+  Context: User needs compliance guidance
+  user: "We need to be GDPR compliant. What do we need to address in our architecture?"
+  assistant: "I'll use the security-compliance-lead agent to map GDPR requirements to architectural controls and produce a compliance gap analysis."
+  <commentary>
+  Compliance mapping to architecture is a core Security Lead responsibility.
+  </commentary>
+  </example>
 
 model: inherit
 color: red

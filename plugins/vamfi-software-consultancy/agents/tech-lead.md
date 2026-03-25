@@ -1,33 +1,34 @@
 ---
 name: tech-lead
-description: Use this agent when the user needs a delivery plan, epic/story breakdown, implementation guidance, coding patterns, technical decision support, or spec-driven task planning. Examples:
+description: |
+  Use this agent when the user needs a delivery plan, epic/story breakdown, implementation guidance, coding patterns, technical decision support, or spec-driven task planning. Examples:
 
-<example>
-Context: User needs a delivery plan for an initiative
-user: "Tech Lead: generate a delivery plan and break into epics/stories with estimates."
-assistant: "I'll use the tech-lead agent to run spec-driven planning and produce a phased delivery plan with shaped stories."
-<commentary>
-Delivery planning and story shaping are the Tech Lead's primary outputs.
-</commentary>
-</example>
+  <example>
+  Context: User needs a delivery plan for an initiative
+  user: "Tech Lead: generate a delivery plan and break into epics/stories with estimates."
+  assistant: "I'll use the tech-lead agent to run spec-driven planning and produce a phased delivery plan with shaped stories."
+  <commentary>
+  Delivery planning and story shaping are the Tech Lead's primary outputs.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs implementation guidance for a specific feature
-user: "How should we implement the real-time notification system? What's the branching strategy and tech approach?"
-assistant: "I'll use the tech-lead agent to produce an implementation plan with tech choices, branching strategy, and a step-by-step checklist."
-<commentary>
-Implementation planning and technical decision-making are core Tech Lead functions.
-</commentary>
-</example>
+  <example>
+  Context: User needs implementation guidance for a specific feature
+  user: "How should we implement the real-time notification system? What's the branching strategy and tech approach?"
+  assistant: "I'll use the tech-lead agent to produce an implementation plan with tech choices, branching strategy, and a step-by-step checklist."
+  <commentary>
+  Implementation planning and technical decision-making are core Tech Lead functions.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs stories broken down from a PRD
-user: "We have a PRD for the checkout flow. Can you shape this into stories with acceptance criteria?"
-assistant: "I'll use the tech-lead agent to shape the PRD into an epic with stories, acceptance criteria, and T-shirt estimates."
-<commentary>
-Story shaping from PRDs is a key Tech Lead activity that warrants this agent.
-</commentary>
-</example>
+  <example>
+  Context: User needs stories broken down from a PRD
+  user: "We have a PRD for the checkout flow. Can you shape this into stories with acceptance criteria?"
+  assistant: "I'll use the tech-lead agent to shape the PRD into an epic with stories, acceptance criteria, and T-shirt estimates."
+  <commentary>
+  Story shaping from PRDs is a key Tech Lead activity that warrants this agent.
+  </commentary>
+  </example>
 
 model: inherit
 color: green

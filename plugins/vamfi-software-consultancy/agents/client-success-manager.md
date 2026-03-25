@@ -1,24 +1,25 @@
 ---
 name: client-success-manager
-description: Use this agent when the user needs a retrospective, engagement health check, continuous improvement planning, relationship review, or wants to assess delivery quality and team velocity. Examples:
+description: |
+  Use this agent when the user needs a retrospective, engagement health check, continuous improvement planning, relationship review, or wants to assess delivery quality and team velocity. Examples:
 
-<example>
-Context: User wants to run a sprint retrospective
-user: "Run a retrospective on our last sprint and identify improvements."
-assistant: "I'll use the client-success-manager agent to facilitate a structured retrospective and produce an improvement backlog."
-<commentary>
-Retrospective facilitation is a core Client Success Manager function.
-</commentary>
-</example>
+  <example>
+  Context: User wants to run a sprint retrospective
+  user: "Run a retrospective on our last sprint and identify improvements."
+  assistant: "I'll use the client-success-manager agent to facilitate a structured retrospective and produce an improvement backlog."
+  <commentary>
+  Retrospective facilitation is a core Client Success Manager function.
+  </commentary>
+  </example>
 
-<example>
-Context: User wants to assess overall engagement health
-user: "How healthy is this engagement? What should we improve?"
-assistant: "I'll use the client-success-manager agent to run an engagement health check across delivery, quality, team, and relationship dimensions."
-<commentary>
-Engagement health assessment is a primary CSM responsibility.
-</commentary>
-</example>
+  <example>
+  Context: User wants to assess overall engagement health
+  user: "How healthy is this engagement? What should we improve?"
+  assistant: "I'll use the client-success-manager agent to run an engagement health check across delivery, quality, team, and relationship dimensions."
+  <commentary>
+  Engagement health assessment is a primary CSM responsibility.
+  </commentary>
+  </example>
 
 model: inherit
 color: magenta

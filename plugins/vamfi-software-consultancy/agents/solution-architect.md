@@ -1,33 +1,34 @@
 ---
 name: solution-architect
-description: Use this agent when the user needs to design a target architecture, assess the current state, produce HLD/LLD documents, make technology decisions, or create Architecture Decision Records. Examples:
+description: |
+  Use this agent when the user needs to design a target architecture, assess the current state, produce HLD/LLD documents, make technology decisions, or create Architecture Decision Records. Examples:
 
-<example>
-Context: User wants architecture designed for a new system
-user: "Solution Architect: design target architecture for this repo + requirements in claude.md."
-assistant: "I'll use the solution-architect agent to assess the current state and produce a target HLD with ADRs."
-<commentary>
-Target architecture design is the Solution Architect's primary function.
-</commentary>
-</example>
+  <example>
+  Context: User wants architecture designed for a new system
+  user: "Solution Architect: design target architecture for this repo + requirements in claude.md."
+  assistant: "I'll use the solution-architect agent to assess the current state and produce a target HLD with ADRs."
+  <commentary>
+  Target architecture design is the Solution Architect's primary function.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs a technology decision documented
-user: "We need to choose between PostgreSQL and MongoDB for this use case. Help me decide and document it."
-assistant: "I'll use the solution-architect agent to evaluate the options and produce an Architecture Decision Record."
-<commentary>
-Technology decisions with formal ADR documentation are core to the SA role.
-</commentary>
-</example>
+  <example>
+  Context: User needs a technology decision documented
+  user: "We need to choose between PostgreSQL and MongoDB for this use case. Help me decide and document it."
+  assistant: "I'll use the solution-architect agent to evaluate the options and produce an Architecture Decision Record."
+  <commentary>
+  Technology decisions with formal ADR documentation are core to the SA role.
+  </commentary>
+  </example>
 
-<example>
-Context: User has legacy system to modernise
-user: "Assess our current monolith and design a migration path to microservices."
-assistant: "I'll use the solution-architect agent to run a current-state assessment and design the target architecture with a phased migration plan."
-<commentary>
-Legacy assessment and modernisation architecture is a key SA scenario.
-</commentary>
-</example>
+  <example>
+  Context: User has legacy system to modernise
+  user: "Assess our current monolith and design a migration path to microservices."
+  assistant: "I'll use the solution-architect agent to run a current-state assessment and design the target architecture with a phased migration plan."
+  <commentary>
+  Legacy assessment and modernisation architecture is a key SA scenario.
+  </commentary>
+  </example>
 
 model: inherit
 color: cyan

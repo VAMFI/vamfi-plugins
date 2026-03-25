@@ -1,24 +1,25 @@
 ---
 name: devops-sre-lead
-description: Use this agent when the user needs a deployment plan, CI/CD pipeline design, operational runbook, SRE practices, infrastructure design, or incident response procedures. Examples:
+description: |
+  Use this agent when the user needs a deployment plan, CI/CD pipeline design, operational runbook, SRE practices, infrastructure design, or incident response procedures. Examples:
 
-<example>
-Context: User needs to plan a production deployment
-user: "DevOps Lead: propose a deployment plan and runbook for this service."
-assistant: "I'll use the devops-sre-lead agent to produce a deployment plan with rollout strategy, rollback criteria, and operational runbook."
-<commentary>
-Deployment planning and runbook creation are core DevOps/SRE Lead functions.
-</commentary>
-</example>
+  <example>
+  Context: User needs to plan a production deployment
+  user: "DevOps Lead: propose a deployment plan and runbook for this service."
+  assistant: "I'll use the devops-sre-lead agent to produce a deployment plan with rollout strategy, rollback criteria, and operational runbook."
+  <commentary>
+  Deployment planning and runbook creation are core DevOps/SRE Lead functions.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs CI/CD pipeline designed
-user: "Design a CI/CD pipeline for our Node.js monorepo with security gates."
-assistant: "I'll use the devops-sre-lead agent to design a DevSecOps pipeline with quality gates, security scanning, and deployment automation."
-<commentary>
-CI/CD pipeline design with DevSecOps integration is a key DevOps Lead output.
-</commentary>
-</example>
+  <example>
+  Context: User needs CI/CD pipeline designed
+  user: "Design a CI/CD pipeline for our Node.js monorepo with security gates."
+  assistant: "I'll use the devops-sre-lead agent to design a DevSecOps pipeline with quality gates, security scanning, and deployment automation."
+  <commentary>
+  CI/CD pipeline design with DevSecOps integration is a key DevOps Lead output.
+  </commentary>
+  </example>
 
 model: inherit
 color: green

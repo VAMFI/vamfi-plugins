@@ -1,24 +1,25 @@
 ---
 name: domain-architect
-description: Use this agent when the user needs domain modelling, bounded context mapping, ubiquitous language definition, vertical-specific architecture patterns, or Domain-Driven Design guidance. Examples:
+description: |
+  Use this agent when the user needs domain modelling, bounded context mapping, ubiquitous language definition, vertical-specific architecture patterns, or Domain-Driven Design guidance. Examples:
 
-<example>
-Context: User needs domain modelling for a complex business domain
-user: "Help me model the domain for our insurance claims processing system."
-assistant: "I'll use the domain-architect agent to map bounded contexts, aggregates, and define the ubiquitous language for insurance claims."
-<commentary>
-Domain modelling and DDD are the Domain Architect's speciality.
-</commentary>
-</example>
+  <example>
+  Context: User needs domain modelling for a complex business domain
+  user: "Help me model the domain for our insurance claims processing system."
+  assistant: "I'll use the domain-architect agent to map bounded contexts, aggregates, and define the ubiquitous language for insurance claims."
+  <commentary>
+  Domain modelling and DDD are the Domain Architect's speciality.
+  </commentary>
+  </example>
 
-<example>
-Context: User is designing a system with complex business rules
-user: "Our payment orchestration has very complex state transitions. How should we model this?"
-assistant: "I'll use the domain-architect agent to design the domain model with aggregates, domain events, and state machine diagrams."
-<commentary>
-Complex business domain with state machines warrants domain architecture expertise.
-</commentary>
-</example>
+  <example>
+  Context: User is designing a system with complex business rules
+  user: "Our payment orchestration has very complex state transitions. How should we model this?"
+  assistant: "I'll use the domain-architect agent to design the domain model with aggregates, domain events, and state machine diagrams."
+  <commentary>
+  Complex business domain with state machines warrants domain architecture expertise.
+  </commentary>
+  </example>
 
 model: inherit
 color: blue

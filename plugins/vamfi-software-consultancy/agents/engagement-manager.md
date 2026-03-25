@@ -1,33 +1,34 @@
 ---
 name: engagement-manager
-description: Use this agent when the user needs to qualify an inbound opportunity, draft a proposal, respond to an RFP, assess strategic fit, or kick off a new client engagement. Examples:
+description: |
+  Use this agent when the user needs to qualify an inbound opportunity, draft a proposal, respond to an RFP, assess strategic fit, or kick off a new client engagement. Examples:
 
-<example>
-Context: User has received an inbound request from a potential client
-user: "Engagement Manager: qualify this inbound request email and suggest a proposal outline."
-assistant: "I'll use the engagement-manager agent to assess this opportunity and produce an Opportunity Brief."
-<commentary>
-User is explicitly invoking the Engagement Manager role to qualify an opportunity — this agent owns stage 1 of the pipeline.
-</commentary>
-</example>
+  <example>
+  Context: User has received an inbound request from a potential client
+  user: "Engagement Manager: qualify this inbound request email and suggest a proposal outline."
+  assistant: "I'll use the engagement-manager agent to assess this opportunity and produce an Opportunity Brief."
+  <commentary>
+  User is explicitly invoking the Engagement Manager role to qualify an opportunity — this agent owns stage 1 of the pipeline.
+  </commentary>
+  </example>
 
-<example>
-Context: User wants to respond to an RFP
-user: "We've received an RFP for a digital transformation programme. Help me build a response."
-assistant: "I'll use the engagement-manager agent to structure your RFP response with win themes, solution overview, and commercial approach."
-<commentary>
-RFP response is a core Engagement Manager output — invoking this agent.
-</commentary>
-</example>
+  <example>
+  Context: User wants to respond to an RFP
+  user: "We've received an RFP for a digital transformation programme. Help me build a response."
+  assistant: "I'll use the engagement-manager agent to structure your RFP response with win themes, solution overview, and commercial approach."
+  <commentary>
+  RFP response is a core Engagement Manager output — invoking this agent.
+  </commentary>
+  </example>
 
-<example>
-Context: User wants to start a new engagement from scratch
-user: "We're starting a new engagement with a fintech client. Where do we begin?"
-assistant: "I'll use the engagement-manager agent to run the qualify-opportunity skill and map out the engagement kickoff."
-<commentary>
-New engagement kickoff is the Engagement Manager's primary trigger.
-</commentary>
-</example>
+  <example>
+  Context: User wants to start a new engagement from scratch
+  user: "We're starting a new engagement with a fintech client. Where do we begin?"
+  assistant: "I'll use the engagement-manager agent to run the qualify-opportunity skill and map out the engagement kickoff."
+  <commentary>
+  New engagement kickoff is the Engagement Manager's primary trigger.
+  </commentary>
+  </example>
 
 model: inherit
 color: yellow

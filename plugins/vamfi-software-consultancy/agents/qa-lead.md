@@ -1,24 +1,25 @@
 ---
 name: qa-lead
-description: Use this agent when the user needs a test strategy, test cases, regression plan, quality gates, or test automation guidance. Examples:
+description: |
+  Use this agent when the user needs a test strategy, test cases, regression plan, quality gates, or test automation guidance. Examples:
 
-<example>
-Context: User needs a test strategy for a new feature set
-user: "QA Lead: create a test strategy and initial test cases for this feature set."
-assistant: "I'll use the qa-lead agent to produce a test strategy covering all test levels and generate test cases with AI-suggested edge cases."
-<commentary>
-Test strategy and case generation are the QA Lead's primary outputs.
-</commentary>
-</example>
+  <example>
+  Context: User needs a test strategy for a new feature set
+  user: "QA Lead: create a test strategy and initial test cases for this feature set."
+  assistant: "I'll use the qa-lead agent to produce a test strategy covering all test levels and generate test cases with AI-suggested edge cases."
+  <commentary>
+  Test strategy and case generation are the QA Lead's primary outputs.
+  </commentary>
+  </example>
 
-<example>
-Context: User has a failing test suite to triage
-user: "Our test suite is slow and flaky. Help us build a regression plan."
-assistant: "I'll use the qa-lead agent to produce a regression plan with flaky test identification and automation ROI assessment."
-<commentary>
-Regression planning and test quality improvement are core QA Lead responsibilities.
-</commentary>
-</example>
+  <example>
+  Context: User has a failing test suite to triage
+  user: "Our test suite is slow and flaky. Help us build a regression plan."
+  assistant: "I'll use the qa-lead agent to produce a regression plan with flaky test identification and automation ROI assessment."
+  <commentary>
+  Regression planning and test quality improvement are core QA Lead responsibilities.
+  </commentary>
+  </example>
 
 model: inherit
 color: yellow

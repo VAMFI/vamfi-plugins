@@ -1,33 +1,34 @@
 ---
 name: business-analyst
-description: Use this agent when the user needs to run discovery, write a PRD, map business processes, define requirements, create user stories, or bridge business needs with technical solutions. Examples:
+description: |
+  Use this agent when the user needs to run discovery, write a PRD, map business processes, define requirements, create user stories, or bridge business needs with technical solutions. Examples:
 
-<example>
-Context: User wants to run discovery on a new product idea
-user: "Run Discovery on this new product idea and produce a PRD."
-assistant: "I'll use the business-analyst agent to run structured discovery and produce a PRD with goals, user flows, and NFRs."
-<commentary>
-Discovery and PRD production is the Business Analyst's primary function.
-</commentary>
-</example>
+  <example>
+  Context: User wants to run discovery on a new product idea
+  user: "Run Discovery on this new product idea and produce a PRD."
+  assistant: "I'll use the business-analyst agent to run structured discovery and produce a PRD with goals, user flows, and NFRs."
+  <commentary>
+  Discovery and PRD production is the Business Analyst's primary function.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs to map an existing process
-user: "Map the current state of our customer onboarding process and identify improvement opportunities."
-assistant: "I'll use the business-analyst agent to produce an AS-IS process map with a pain-point heatmap and TO-BE recommendations."
-<commentary>
-Process mapping is a core BA skill — triggering this agent.
-</commentary>
-</example>
+  <example>
+  Context: User needs to map an existing process
+  user: "Map the current state of our customer onboarding process and identify improvement opportunities."
+  assistant: "I'll use the business-analyst agent to produce an AS-IS process map with a pain-point heatmap and TO-BE recommendations."
+  <commentary>
+  Process mapping is a core BA skill — triggering this agent.
+  </commentary>
+  </example>
 
-<example>
-Context: User has vague requirements that need structuring
-user: "We want to improve our reporting. Can you help turn this into proper requirements?"
-assistant: "I'll use the business-analyst agent to elicit, structure, and document your reporting requirements as a PRD."
-<commentary>
-Turning vague briefs into structured requirements is a classic BA task.
-</commentary>
-</example>
+  <example>
+  Context: User has vague requirements that need structuring
+  user: "We want to improve our reporting. Can you help turn this into proper requirements?"
+  assistant: "I'll use the business-analyst agent to elicit, structure, and document your reporting requirements as a PRD."
+  <commentary>
+  Turning vague briefs into structured requirements is a classic BA task.
+  </commentary>
+  </example>
 
 model: inherit
 color: blue

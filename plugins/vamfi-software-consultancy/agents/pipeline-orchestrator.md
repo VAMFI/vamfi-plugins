@@ -1,33 +1,34 @@
 ---
 name: pipeline-orchestrator
-description: Use this agent when the user wants to run the full 8-stage VAMFI consulting pipeline, orchestrate handoffs between stages, track which stages have been completed, or resume an in-progress engagement. Examples:
+description: |
+  Use this agent when the user wants to run the full 8-stage VAMFI consulting pipeline, orchestrate handoffs between stages, track which stages have been completed, or resume an in-progress engagement. Examples:
 
-<example>
-Context: User wants to run the complete pipeline end-to-end
-user: "Run the full VAMFI pipeline for this new product initiative."
-assistant: "I'll use the pipeline-orchestrator agent to manage the complete 8-stage engagement pipeline with checkpoints between each stage."
-<commentary>
-Full pipeline orchestration is the primary function of this meta-agent.
-</commentary>
-</example>
+  <example>
+  Context: User wants to run the complete pipeline end-to-end
+  user: "Run the full VAMFI pipeline for this new product initiative."
+  assistant: "I'll use the pipeline-orchestrator agent to manage the complete 8-stage engagement pipeline with checkpoints between each stage."
+  <commentary>
+  Full pipeline orchestration is the primary function of this meta-agent.
+  </commentary>
+  </example>
 
-<example>
-Context: User wants to check where they are in the pipeline
-user: "Where are we in the engagement pipeline? What stage are we on?"
-assistant: "I'll use the pipeline-orchestrator agent to assess the produced artifacts and tell you exactly which stages are complete and what comes next."
-<commentary>
-Pipeline state assessment and next-stage guidance is a key orchestrator function.
-</commentary>
-</example>
+  <example>
+  Context: User wants to check where they are in the pipeline
+  user: "Where are we in the engagement pipeline? What stage are we on?"
+  assistant: "I'll use the pipeline-orchestrator agent to assess the produced artifacts and tell you exactly which stages are complete and what comes next."
+  <commentary>
+  Pipeline state assessment and next-stage guidance is a key orchestrator function.
+  </commentary>
+  </example>
 
-<example>
-Context: User wants to resume a paused engagement
-user: "We paused the engagement at architecture. Resume from where we left off."
-assistant: "I'll use the pipeline-orchestrator agent to load the existing artifacts, brief you on the current state, and continue from Stage 3."
-<commentary>
-Engagement resumption requires the orchestrator to read context and continue correctly.
-</commentary>
-</example>
+  <example>
+  Context: User wants to resume a paused engagement
+  user: "We paused the engagement at architecture. Resume from where we left off."
+  assistant: "I'll use the pipeline-orchestrator agent to load the existing artifacts, brief you on the current state, and continue from Stage 3."
+  <commentary>
+  Engagement resumption requires the orchestrator to read context and continue correctly.
+  </commentary>
+  </example>
 
 model: inherit
 color: magenta
