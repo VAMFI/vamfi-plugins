@@ -125,6 +125,37 @@
         "portable",
         "reusable"
       ]
+    },
+    {
+      "name": "vamfi-software-consultancy",
+      "source": "./plugins/vamfi-software-consultancy",
+      "description": "Full-stack software consultancy pipeline — 8 specialized AI agents covering the complete SDLC from lead qualification through architecture, delivery planning, implementation, testing, release, and ongoing operations. Built for professional consulting engagements.",
+      "author": {
+        "name": "Vamfi"
+      },
+      "homepage": "https://github.com/VAMFI/vamfi-plugins",
+      "repository": "https://github.com/VAMFI/vamfi-plugins",
+      "license": "MIT",
+      "keywords": [
+        "consulting",
+        "sdlc",
+        "software-delivery",
+        "architecture",
+        "multi-agent",
+        "enterprise",
+        "devops",
+        "qa",
+        "security",
+        "cowork"
+      ],
+      "category": "workflow",
+      "tags": [
+        "consulting",
+        "sdlc",
+        "architecture",
+        "enterprise",
+        "multi-agent"
+      ]
     }
   ]
 }

@@ -15,6 +15,7 @@ Then install individual plugins:
 ```bash
 claude plugins install vamfi-business-mentor
 claude plugins install bmad-cowork
+claude plugins install vamfi-software-consultancy
 ```
 
 ## Plugins
@@ -42,6 +43,18 @@ BMAD (Breakthrough Method of Agile AI-Driven Development) as native Claude Cowor
 - Story-driven development with architecture context extraction
 - Phase gates ensuring quality before advancement
 - Quick Flow path for simple tasks (skip ceremony)
+
+### vamfi-software-consultancy
+
+Full-stack software consultancy pipeline covering the complete SDLC from lead intake to production operations. 8 specialized AI agents and 25+ skills for professional consulting engagements.
+
+**Features:**
+- 8 specialized agents: Engagement Manager, Business Analyst, Solution Architect, Domain Architect, Tech Lead, QA Lead, DevOps/SRE Lead, Security & Compliance Lead
+- 8 pipeline commands: `/qualify`, `/discover`, `/architect`, `/plan`, `/implement`, `/test`, `/release`, `/run`
+- 1 end-to-end command: `/full-pipeline` — runs all 8 stages sequentially
+- 25+ skills across 6 categories: Lead & Discovery, Requirements, Architecture, Delivery, Testing, Release/DevOps
+- Event-driven hooks: pre/post-task quality gates, session summaries, artifact tracking
+- Supports RFP responses, PRDs, architecture docs, test strategies, runbooks, and postmortems
 
 ## Contributing
 
