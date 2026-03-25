@@ -1,24 +1,25 @@
 ---
 name: pitch-coach
-description: Use this agent when the user is preparing a pitch, presentation, or needs to communicate their business idea clearly. Trigger when user mentions pitch deck, investor meeting, demo day, elevator pitch, storytelling, or presentation preparation.
+description: |
+  Use this agent when the user is preparing a pitch, presentation, or needs to communicate their business idea clearly. Trigger when user mentions pitch deck, investor meeting, demo day, elevator pitch, storytelling, or presentation preparation.
 
-<example>
-Context: User is preparing for an investor meeting
-user: "I have a pitch meeting with a VC next week — help me prepare"
-assistant: "I'll use the pitch-coach agent to help you prepare a compelling pitch."
-<commentary>
-User preparing for fundraising presentation — trigger pitch-coach for structured preparation.
-</commentary>
-</example>
+  <example>
+  Context: User is preparing for an investor meeting
+  user: "I have a pitch meeting with a VC next week — help me prepare"
+  assistant: "I'll use the pitch-coach agent to help you prepare a compelling pitch."
+  <commentary>
+  User preparing for fundraising presentation — trigger pitch-coach for structured preparation.
+  </commentary>
+  </example>
 
-<example>
-Context: User wants to improve their business storytelling
-user: "How do I explain what my startup does in 30 seconds?"
-assistant: "I'll use the pitch-coach agent to craft a compelling elevator pitch."
-<commentary>
-User needs help with concise business communication — pitch-coach territory.
-</commentary>
-</example>
+  <example>
+  Context: User wants to improve their business storytelling
+  user: "How do I explain what my startup does in 30 seconds?"
+  assistant: "I'll use the pitch-coach agent to craft a compelling elevator pitch."
+  <commentary>
+  User needs help with concise business communication — pitch-coach territory.
+  </commentary>
+  </example>
 
 model: sonnet
 color: yellow

@@ -1,24 +1,25 @@
 ---
 name: market-researcher
-description: Use this agent when the user needs market research, competitive analysis, industry analysis, or data to inform a business decision. Trigger when user asks about market size, competitors, industry trends, customer segments, or needs evidence to support a business case.
+description: |
+  Use this agent when the user needs market research, competitive analysis, industry analysis, or data to inform a business decision. Trigger when user asks about market size, competitors, industry trends, customer segments, or needs evidence to support a business case.
 
-<example>
-Context: User needs to understand their competitive landscape
-user: "Who are the main competitors in the no-code database space?"
-assistant: "I'll use the market-researcher agent to map the competitive landscape for you."
-<commentary>
-User needs competitive intelligence — trigger market-researcher for thorough analysis.
-</commentary>
-</example>
+  <example>
+  Context: User needs to understand their competitive landscape
+  user: "Who are the main competitors in the no-code database space?"
+  assistant: "I'll use the market-researcher agent to map the competitive landscape for you."
+  <commentary>
+  User needs competitive intelligence — trigger market-researcher for thorough analysis.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs market sizing data
-user: "How big is the market for AI-powered customer support tools?"
-assistant: "I'll use the market-researcher agent to size this market with bottom-up analysis."
-<commentary>
-Market sizing request — needs research and structured analysis.
-</commentary>
-</example>
+  <example>
+  Context: User needs market sizing data
+  user: "How big is the market for AI-powered customer support tools?"
+  assistant: "I'll use the market-researcher agent to size this market with bottom-up analysis."
+  <commentary>
+  Market sizing request — needs research and structured analysis.
+  </commentary>
+  </example>
 
 model: sonnet
 color: green

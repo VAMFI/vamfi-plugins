@@ -1,33 +1,34 @@
 ---
 name: business-advisor
-description: Use this agent when the user discusses business challenges, strategic decisions, growth problems, or asks for business advice. Trigger when the user mentions revenue, customers, market, competition, pricing, scaling, or any business operations topic.
+description: |
+  Use this agent when the user discusses business challenges, strategic decisions, growth problems, or asks for business advice. Trigger when the user mentions revenue, customers, market, competition, pricing, scaling, or any business operations topic.
 
-<example>
-Context: User is working on a project and mentions a business challenge
-user: "I'm not sure how to price this product"
-assistant: "I'll use the business-advisor agent to help you think through pricing strategy."
-<commentary>
-User raised a business question in context of their work — trigger business-advisor for strategic guidance.
-</commentary>
-</example>
+  <example>
+  Context: User is working on a project and mentions a business challenge
+  user: "I'm not sure how to price this product"
+  assistant: "I'll use the business-advisor agent to help you think through pricing strategy."
+  <commentary>
+  User raised a business question in context of their work — trigger business-advisor for strategic guidance.
+  </commentary>
+  </example>
 
-<example>
-Context: User asks about growing their business
-user: "We're getting users but nobody is paying — what should we do?"
-assistant: "I'll use the business-advisor agent to diagnose your conversion problem and recommend fixes."
-<commentary>
-User describes a business problem that needs diagnosis and strategic advice.
-</commentary>
-</example>
+  <example>
+  Context: User asks about growing their business
+  user: "We're getting users but nobody is paying — what should we do?"
+  assistant: "I'll use the business-advisor agent to diagnose your conversion problem and recommend fixes."
+  <commentary>
+  User describes a business problem that needs diagnosis and strategic advice.
+  </commentary>
+  </example>
 
-<example>
-Context: User is making a strategic decision
-user: "Should we focus on enterprise or SMB customers?"
-assistant: "I'll use the business-advisor agent to analyze the tradeoffs and help you decide."
-<commentary>
-Strategic business decision requiring framework-driven analysis.
-</commentary>
-</example>
+  <example>
+  Context: User is making a strategic decision
+  user: "Should we focus on enterprise or SMB customers?"
+  assistant: "I'll use the business-advisor agent to analyze the tradeoffs and help you decide."
+  <commentary>
+  Strategic business decision requiring framework-driven analysis.
+  </commentary>
+  </example>
 
 model: opus
 color: blue
