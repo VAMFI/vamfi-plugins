@@ -1,0 +1,152 @@
+{
+  "name": "vamfi-software-consultancy",
+  "version": "1.0.0",
+  "description": "Full-lifecycle software consultancy pipeline for Claude Code — from lead qualification and discovery through architecture, delivery, testing, release, and continuous improvement. Brings Cognizant-grade SDLC methodology, 10 specialist agents, 25 skills, and 9 commands into your workspace.",
+  "author": "VAMFI",
+  "homepage": "https://github.com/VAMFI/vamfi-plugins",
+  "license": "MIT",
+  "engines": {
+    "claude-code": ">=1.0.0"
+  },
+  "agents": [
+    "agents/engagement-manager.md",
+    "agents/business-analyst.md",
+    "agents/solution-architect.md",
+    "agents/domain-architect.md",
+    "agents/tech-lead.md",
+    "agents/qa-lead.md",
+    "agents/devops-sre-lead.md",
+    "agents/security-compliance-lead.md",
+    "agents/pipeline-orchestrator.md",
+    "agents/client-success-manager.md"
+  ],
+  "commands": [
+    "commands/qualify.md",
+    "commands/discover.md",
+    "commands/architect.md",
+    "commands/plan.md",
+    "commands/implement.md",
+    "commands/test.md",
+    "commands/release.md",
+    "commands/run.md",
+    "commands/full-pipeline.md"
+  ],
+  "skills": [
+    "skills/qualify-opportunity/SKILL.md",
+    "skills/spec-driven-planning/SKILL.md",
+    "skills/run-discovery/SKILL.md",
+    "skills/write-proposal-rfp-response/SKILL.md",
+    "skills/draft-prd/SKILL.md",
+    "skills/process-mapping/SKILL.md",
+    "skills/current-state-assessment/SKILL.md",
+    "skills/target-architecture-design/SKILL.md",
+    "skills/integration-design/SKILL.md",
+    "skills/nfr-and-capacity-analysis/SKILL.md",
+    "skills/security-architecture-review/SKILL.md",
+    "skills/delivery-plan-and-roadmap/SKILL.md",
+    "skills/backlog-and-story-shaping/SKILL.md",
+    "skills/implementation-plan/SKILL.md",
+    "skills/code-change-implementation/SKILL.md",
+    "skills/code-review-and-refactor/SKILL.md",
+    "skills/test-strategy-and-plan/SKILL.md",
+    "skills/test-case-generation/SKILL.md",
+    "skills/regression-plan/SKILL.md",
+    "skills/deployment-plan/SKILL.md",
+    "skills/runbook-and-operability-review/SKILL.md",
+    "skills/cost-and-performance-optimization/SKILL.md",
+    "skills/incident-postmortem/SKILL.md",
+    "skills/artifact-template-library/SKILL.md",
+    "skills/engagement-health-check/SKILL.md"
+  ],
+  "hooks": "hooks/hooks.json",
+  "keywords": [
+    "consulting",
+    "sdlc",
+    "architecture",
+    "delivery",
+    "agile",
+    "devops",
+    "testing",
+    "security",
+    "proposal",
+    "discovery",
+    "enterprise",
+    "pipeline",
+    "vamfi"
+  ],
+  "categories": [
+    "consulting",
+    "software-development",
+    "project-management",
+    "architecture",
+    "devops"
+  ],
+  "pipeline": {
+    "stages": [
+      {
+        "id": "qualify",
+        "name": "Lead Qualification",
+        "command": "qualify",
+        "agent": "engagement-manager",
+        "skills": ["qualify-opportunity", "write-proposal-rfp-response"],
+        "outputs": ["opportunity-brief", "proposal-outline"]
+      },
+      {
+        "id": "discover",
+        "name": "Discovery",
+        "command": "discover",
+        "agent": "business-analyst",
+        "skills": ["run-discovery", "process-mapping", "current-state-assessment"],
+        "outputs": ["discovery-report", "process-maps", "current-state-assessment"]
+      },
+      {
+        "id": "architect",
+        "name": "Architecture & Design",
+        "command": "architect",
+        "agent": "solution-architect",
+        "skills": ["target-architecture-design", "integration-design", "nfr-and-capacity-analysis", "security-architecture-review"],
+        "outputs": ["hld", "integration-map", "nfr-register", "security-architecture-review"]
+      },
+      {
+        "id": "plan",
+        "name": "Delivery Planning",
+        "command": "plan",
+        "agent": "engagement-manager",
+        "skills": ["delivery-plan-and-roadmap", "backlog-and-story-shaping", "implementation-plan", "spec-driven-planning"],
+        "outputs": ["delivery-plan", "backlog", "implementation-plan"]
+      },
+      {
+        "id": "implement",
+        "name": "Implementation",
+        "command": "implement",
+        "agent": "tech-lead",
+        "skills": ["code-change-implementation", "code-review-and-refactor", "draft-prd"],
+        "outputs": ["working-code", "review-report", "prd"]
+      },
+      {
+        "id": "test",
+        "name": "Testing & Quality",
+        "command": "test",
+        "agent": "qa-lead",
+        "skills": ["test-strategy-and-plan", "test-case-generation", "regression-plan"],
+        "outputs": ["test-strategy", "test-cases", "regression-plan"]
+      },
+      {
+        "id": "release",
+        "name": "Release & DevOps",
+        "command": "release",
+        "agent": "devops-sre-lead",
+        "skills": ["deployment-plan", "runbook-and-operability-review"],
+        "outputs": ["deployment-plan", "runbook"]
+      },
+      {
+        "id": "run",
+        "name": "Run & Continuous Improvement",
+        "command": "run",
+        "agent": "devops-sre-lead",
+        "skills": ["cost-and-performance-optimization", "incident-postmortem", "engagement-health-check"],
+        "outputs": ["optimization-report", "postmortem", "health-check-report"]
+      }
+    ]
+  }
+}

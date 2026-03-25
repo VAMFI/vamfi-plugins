@@ -1,0 +1,26 @@
+{
+  "SessionStart": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "At the start of this session, silently scan the current project for VAMFI context. Check: (1) Does a .claude/vamfi.local.md file exist? If so, load it and brief the user on the active engagement context. (2) Does a docs/vamfi/ directory exist? If so, list any existing artifacts (proposals, PRDs, architecture docs, runbooks) so the user knows what has already been produced. (3) Does CLAUDE.md contain project context relevant to a consultancy engagement? If so, extract the tech stack, goals, and constraints. Summarise findings in 3-5 bullet points prefixed with 'VAMFI Context:'. If no context is found, quietly offer to run /vamfi-software-consultancy:qualify to start a new engagement.",
+          "timeout": 30
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "At the end of this session, check if any VAMFI consultancy artifacts were produced (proposals, PRDs, HLDs, architecture decisions, test strategies, runbooks, delivery plans, postmortems, etc.). If artifacts were produced: (1) Summarise what was created in bullet points. (2) Ask the user: 'Would you like me to save these artifacts to docs/vamfi/ in this project? I can create timestamped markdown files for each one.' If the user confirms, create the docs/vamfi/ directory if it does not exist and write each artifact as a separate markdown file with a filename pattern of: docs/vamfi/YYYY-MM-DD-artifact-type.md. Include an artifact registry entry at docs/vamfi/REGISTRY.md listing all artifacts with dates and brief descriptions.",
+          "timeout": 45
+        }
+      ]
+    }
+  ]
+}

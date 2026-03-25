@@ -1,0 +1,26 @@
+{
+  "name": "vamfi-software-consultancy",
+  "version": "1.0.0",
+  "description": "End-to-end AI-powered software consultancy plugin covering the full SDLC pipeline — from lead qualification and discovery through architecture, delivery, testing, release, and continuous improvement. Brings Cognizant-grade consultancy into every Cowork session.",
+  "author": {
+    "name": "VAMFI Software",
+    "email": "hello@vamfi.com",
+    "url": "https://vamfi.com"
+  },
+  "homepage": "https://vamfi.com/plugins/software-consultancy",
+  "repository": "https://github.com/vamfi/software-consultancy-plugin",
+  "license": "MIT",
+  "keywords": [
+    "consultancy",
+    "sdlc",
+    "architecture",
+    "discovery",
+    "delivery",
+    "devops",
+    "security",
+    "testing",
+    "proposal",
+    "prd",
+    "enterprise"
+  ]
+}
